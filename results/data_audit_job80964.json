@@ -1,0 +1,107 @@
+{
+  "job_id": "80964",
+  "data_source": "/mnt/nodes/a-rtx3090-04/semester/1/RS/data",
+  "raw_movielens_loaded": false,
+  "sha256": {
+    "train.csv": "547030222b06c2e7a8710515e72dfd8c635ba3d6fbfc13e571a2dc45a0afe4c2",
+    "test.csv": "824336a9937e0ed385f9a5a74b11c7a67f2437fb261ddca07fdc05059928e570",
+    "sample_submission.csv": "1049b343370fdc9947c2e28a46354454ee1c010ae3ea5ae682c60c6ed0286f79"
+  },
+  "train": {
+    "columns": [
+      "userId",
+      "movieId",
+      "rating",
+      "time_idx"
+    ],
+    "rows": 80621,
+    "users": 610,
+    "items": 8237,
+    "user_id_min": 0,
+    "user_id_max": 609,
+    "user_ids_are_zero_based_contiguous": true,
+    "movie_id_min": 0,
+    "movie_id_max": 9723,
+    "missing_movie_ids_within_observed_range": 1487,
+    "rating_histogram": {
+      "0.5": 999,
+      "1.0": 2170,
+      "1.5": 1353,
+      "2.0": 5994,
+      "2.5": 4455,
+      "3.0": 16235,
+      "3.5": 10224,
+      "4.0": 21640,
+      "4.5": 6712,
+      "5.0": 10839
+    },
+    "rows_per_user_min": 12,
+    "rows_per_user_median": 56.5,
+    "rows_per_user_max": 2158,
+    "users_whose_time_idx_is_exactly_0_to_n_minus_1": 610,
+    "time_idx_nonprefix_examples": [],
+    "time_idx_min": 0,
+    "time_idx_max": 2157,
+    "rows_sorted_by_user_and_time_idx": true,
+    "duplicate_user_movie_pairs": 0,
+    "missing_cells": 0
+  },
+  "test": {
+    "columns": [
+      "id",
+      "userId"
+    ],
+    "rows": 588,
+    "users": 588,
+    "unknown_users": [],
+    "train_users_without_test_row": [
+      6,
+      45,
+      58,
+      89,
+      91,
+      93,
+      184,
+      259,
+      261,
+      278,
+      336,
+      350,
+      363,
+      385,
+      387,
+      401,
+      443,
+      446,
+      457,
+      531,
+      535,
+      544
+    ],
+    "id_is_row_number": true,
+    "test_users_sorted": true,
+    "id_userId_mismatch_rows": 582
+  },
+  "sample_submission": {
+    "columns": [
+      "id",
+      "recommendations"
+    ],
+    "rows": 588,
+    "items_per_row": [
+      20
+    ],
+    "movie_id_min": 0,
+    "movie_id_max": 9723,
+    "distinct_movies_absent_from_train": 0,
+    "note": "Format example only; these lists are not ground-truth labels."
+  },
+  "comparison_to_published_ml_latest_small_metadata": {
+    "published_users": 610,
+    "published_ratings": 100836,
+    "published_movies_including_tagged_only": 9742,
+    "train_fraction_if_this_is_the_source": 0.7995259629497402,
+    "unprovided_ratings_if_this_is_the_source": 20215,
+    "note": "Metadata comparison is evidence for a hypothesis, not proof of source identity or split code."
+  }
+}
