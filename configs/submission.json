@@ -1,0 +1,15 @@
+{
+  "seed": 2020,
+  "selection": {
+    "protocol": "per-user chronological 80/20, binary full-catalog NDCG@20",
+    "validation_ndcg20": {"ease": 0.15500816004052462, "slim": 0.15821033194014356, "rp3beta": 0.1416384847365575, "sasrec": 0.13567689760639792},
+    "sasrec_best_epoch": 265
+  },
+  "models": {
+    "ease": {"regularization": 300},
+    "slim": {"alpha": 0.3, "l1_ratio": 0.01, "topk": 100, "workers": 4},
+    "rp3beta": {"alpha": 1.0, "beta": 0.2, "topk": 200},
+    "sasrec": {"dim": 64, "maxlen": 100, "blocks": 2, "heads": 2, "dropout": 0.2,
+               "learning_rate": 0.001, "batch_size": 128, "epochs": 265}
+  }
+}

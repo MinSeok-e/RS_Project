@@ -1,0 +1,13 @@
+{
+  "valid_fraction": 0.2,
+  "seed": 2020,
+  "ease": [],
+  "rp3beta": [],
+  "sasrec": [],
+  "slim": [
+    {"alpha": 0.1, "l1_ratio": 0.01, "topk": 100, "workers": 4},
+    {"alpha": 0.1, "l1_ratio": 0.1, "topk": 100, "workers": 4},
+    {"alpha": 0.3, "l1_ratio": 0.01, "topk": 100, "workers": 4},
+    {"alpha": 0.3, "l1_ratio": 0.1, "topk": 100, "workers": 4}
+  ]
+}
