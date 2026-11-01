@@ -1,0 +1,43 @@
+{
+  "keyword": "MoE4_Lambda20_Full_Bag3",
+  "method": "raw",
+  "quota_utc_date": "2026-11-01",
+  "fit_interactions": 80621,
+  "data_hashes": {
+    "train.csv": "547030222b06c2e7a8710515e72dfd8c635ba3d6fbfc13e571a2dc45a0afe4c2",
+    "test.csv": "824336a9937e0ed385f9a5a74b11c7a67f2437fb261ddca07fdc05059928e570",
+    "sample_submission.csv": "1049b343370fdc9947c2e28a46354454ee1c010ae3ea5ae682c60c6ed0286f79"
+  },
+  "inputs": [
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_lambda_82442/bag_rrf.npy",
+      "sha256": "bbf768a699eb40f09f8dd7c6b3dda64f88edd86adec94305af4ea502c614b9cc",
+      "weight": 1.0
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_lambda_82442/complete.json",
+      "sha256": "cb4508403cb9d21b7df2690e5c674ae85826942bc0b6f3f4227e67b7b7b75d81"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/report/train_ranker_final.py",
+      "sha256": "15ef8e87522a2b074e06fa7f782b7b3b42618a0f098cb2e623977476b963171d"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_lambda_82442/seed2020.pt",
+      "sha256": "c164580a24a8dfe8a719b3e4a4299f5b6366e6aa8a37af035b0fa5da8986a4c0"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_lambda_82442/seed2021.pt",
+      "sha256": "663d1208198a6386783cfdbec34a47d7a5d619cf55f2cfa4015dd7e207365b7f"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_lambda_82442/seed2022.pt",
+      "sha256": "0ba13f635b7fd37f1345b61d27858d706473ba0bc4ba0fed0a8d8c7ae93e2fcc"
+    }
+  ],
+  "validation_ndcg20": null,
+  "training_policy": "Final refit only; previous outer train.csv block included as an additional historical query. Former validation metrics are not holdout scores for this model.",
+  "fixed_refit_config": "submission/configs/v13_fit.json"
+}
