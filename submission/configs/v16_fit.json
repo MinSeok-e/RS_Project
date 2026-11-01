@@ -1,0 +1,18 @@
+{
+  "kind": "mixture4",
+  "hidden": 128,
+  "objective": "lambda20",
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "epochs": 10,
+  "seeds": [
+    2020,
+    2021,
+    2022
+  ],
+  "include_last_training_block": true,
+  "last_block_weight": 3.0,
+  "features_directory": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/search_81622",
+  "inference_features": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/submission_features_82287/81622.npz",
+  "inference_features_sha256": "2097a5ad89c332fdaa80b6d5faa57e8c4cf8329ab51be1a22b4f555c12357843"
+}
