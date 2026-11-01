@@ -102,3 +102,6 @@
 !/submission/configs/v12.json
 !/submission/configs/v13_fit.json
 !/submission/configs/v13.json
+!/submission/rs_project/final_tree_fit.py
+!/submission/configs/v14_fit.json
+!/submission/configs/v14.json

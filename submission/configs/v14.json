@@ -1,0 +1,39 @@
+{
+  "keyword": "CatBoost_YetiRank_Full_Bag2",
+  "method": "raw",
+  "quota_utc_date": "2026-11-01",
+  "fit_interactions": 80621,
+  "data_hashes": {
+    "train.csv": "547030222b06c2e7a8710515e72dfd8c635ba3d6fbfc13e571a2dc45a0afe4c2",
+    "test.csv": "824336a9937e0ed385f9a5a74b11c7a67f2437fb261ddca07fdc05059928e570",
+    "sample_submission.csv": "1049b343370fdc9947c2e28a46354454ee1c010ae3ea5ae682c60c6ed0286f79"
+  },
+  "inputs": [
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_catboost_82445/bag_rrf.npy",
+      "sha256": "007341d599cbbadd62e036b4b3774be21ee7298a168d690f1a1c0224e9b9cce7",
+      "weight": 1.0
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_catboost_82445/complete.json",
+      "sha256": "4e67a04ac7b20617e8cd7001a5abaafad038a0a26e363c3a663a693841d5f3ed"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/report/fit_catboost_final.py",
+      "sha256": "5a0e52937b240a336ca0f710ba30edf587c53c2854e605eb1d5354e017a3763b"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_catboost_82445/seed2020.cbm",
+      "sha256": "89eb79a3a782aadfa20762ec6e865f32e45d86b349ddf90db4c14ccf12090e38"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_catboost_82445/seed2021.cbm",
+      "sha256": "c5a803d43607bcb9d928f970c36d34c845cb21e1932c11c7e7e10460e55a4f9a"
+    }
+  ],
+  "validation_ndcg20": null,
+  "training_policy": "Final refit including previous train.csv holdout block; no holdout claim for this refit. No test labels. GPU training is not bitwise deterministic.",
+  "fixed_refit_config": "submission/configs/v14_fit.json"
+}

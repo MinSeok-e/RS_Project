@@ -1,0 +1,24 @@
+{
+  "parameters": {
+    "loss_function": "YetiRank",
+    "iterations": 600,
+    "depth": 8,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 3,
+    "random_seed": 2020,
+    "thread_count": 2,
+    "task_type": "GPU",
+    "devices": "0",
+    "gpu_ram_part": 0.3,
+    "border_count": 64,
+    "allow_writing_files": false,
+    "logging_level": "Silent"
+  },
+  "seeds": [
+    2020,
+    2021
+  ],
+  "features_directory": "/home/minseok/data/semester/1/RS/project/results/search_81234",
+  "inference_features": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/submission_features_82287/81234.npz",
+  "inference_features_sha256": "a9ccb33caefd48a1a4b327f99eee0f559366f61b983bd96b543d9ca3e8c316da"
+}
