@@ -62,7 +62,9 @@ def filename(number, model, params):
         else:
             keyword = f'SASRec_d{params["dim"]}_len{params["maxlen"]}_ep{params["epochs"]}'
     elif model == 'hybrid_ensemble':
-        keyword = 'HybridEnsemble_Rerank'
+        keyword = params.get('keyword', 'HybridEnsemble_Rerank')
+        if not re.fullmatch(r'[A-Za-z0-9_]+', keyword):
+            raise SubmissionError('Invalid submission keyword')
     else:
         raise SubmissionError('Unsupported model')
     return f'MinseokJeong_v{number}_{keyword}.csv'
@@ -153,6 +155,11 @@ def publish(api, root, manifest, action):
         if action == 'status':
             print(json.dumps({'model': model, 'status': 'NOT_SUBMITTED'}), flush=True)
             continue
+        if manifest.get("quota_utc_date"):
+            if str(datetime.now(timezone.utc).date()) != manifest["quota_utc_date"]:
+                raise SubmissionError("The authorized submission day has ended")
+            if api.competition_get_submission_limits(COMPETITION).num_allowed_now <= 0:
+                raise SubmissionError("No submissions remain today")
         number = next_number(existing, ledger)
         name = filename(number, model, details['parameters'])
         upload = root / 'submissions' / name

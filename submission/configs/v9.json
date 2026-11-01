@@ -1,0 +1,27 @@
+{
+  "keyword": "MoE16_CE_Frozen",
+  "method": "raw",
+  "quota_utc_date": "2026-11-01",
+  "fit_interactions": 80621,
+  "data_hashes": {
+    "train.csv": "547030222b06c2e7a8710515e72dfd8c635ba3d6fbfc13e571a2dc45a0afe4c2",
+    "test.csv": "824336a9937e0ed385f9a5a74b11c7a67f2437fb261ddca07fdc05059928e570",
+    "sample_submission.csv": "1049b343370fdc9947c2e28a46354454ee1c010ae3ea5ae682c60c6ed0286f79"
+  },
+  "inputs": [
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/submission_ensemble_82288/08f8127de660ce1e32de.npy",
+      "sha256": "01a7157ad80b0f199103a59b5221c659cd8011582668c01dfdb9efc3a0a6b628",
+      "weight": 1.0
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/search_81713/neural_ranker_mixture16_list_ce_best.pt",
+      "sha256": "ffa11a825a779d152d691375f0de209dc04bf11a2b3c50ab55f98761a69422a6"
+    }
+  ],
+  "validation_ndcg20": 0.25501007597489683,
+  "training_policy": "Historical-fold trained MoE16 CE, full-history base-model inputs; frozen ranking weights. Standalone control against v8 nested ensemble.",
+  "parent_manifest": "results/submission_ensemble_82288/manifest.json"
+}

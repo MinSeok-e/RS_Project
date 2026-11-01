@@ -88,3 +88,8 @@
 !/submission/tests/test_models.py
 !/submission/tests/test_sequence_training.py
 !/submission/tests/test_submission.py
+!/submission/rs_project/selected_mix.py
+!/submission/scripts/submit_selected.sh
+!/submission/slurm/selected.sbatch
+!/submission/configs/v9.json
+!/submission/tests/test_selected_submission.py
