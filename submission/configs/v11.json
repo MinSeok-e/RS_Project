@@ -1,0 +1,35 @@
+{
+  "keyword": "Hybrid_MoEFull_25pct",
+  "method": "rrf",
+  "quota_utc_date": "2026-11-01",
+  "fit_interactions": 80621,
+  "data_hashes": {
+    "train.csv": "547030222b06c2e7a8710515e72dfd8c635ba3d6fbfc13e571a2dc45a0afe4c2",
+    "test.csv": "824336a9937e0ed385f9a5a74b11c7a67f2437fb261ddca07fdc05059928e570",
+    "sample_submission.csv": "1049b343370fdc9947c2e28a46354454ee1c010ae3ea5ae682c60c6ed0286f79"
+  },
+  "inputs": [
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/submission_ensemble_82288/graph/c76e0f1db25227911f6f.npy",
+      "sha256": "9272a4e5a84cae9b1ca3d07c3afab56aa929773e105a0d1d34861e7faa6d3a18",
+      "weight": 0.75
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_ranker_82373/bag_rrf.npy",
+      "sha256": "702b027ecf410515350b948b5c9104f2ff99c5033736774268b27933c4ecf3a5",
+      "weight": 0.25
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/submission_ensemble_82288/manifest.json",
+      "sha256": "49f67fbad7c3a166d689b5841c9eba10b7d3aaa3bbe34adf210ab3080641357f"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_ranker_82373/complete.json",
+      "sha256": "b9fce8f5554dddfc70e3e60aa5e54b8335f51eaaa77b9641ab6de676ffc169bc"
+    }
+  ],
+  "validation_ndcg20": null,
+  "training_policy": "RRF blend: v8 hybrid 75 percent and full-refit MoE16 three-seed bag 25 percent. Fixed after public v9/v10 comparison; no holdout score claimed for final-refit inputs."
+}
