@@ -1,23 +1,19 @@
 # Recommender System Project
 2026713004 / Minseok Jeong
 
-EASE, SLIM ElasticNet, RP3β, and SASRec on the competition dataset.
+캐글에 제출한 모델 코드와 최종 설정만 `submission/`에서 관리합니다.
 
-- Per-user chronological ~80/20 split; all observed interactions = 1.
-- Full-catalog NDCG@20: exclude seen items; cold validation targets remain in IDCG.
-- SASRec uses fit history only. RP3β uses row top-k and row normalization.
-- Selected settings: `configs/best.json` (default).
+| 제출 | 모델 | 설정 |
+|---|---|---|
+| v3–v6 | EASE, SLIM, RP3β, SASRec | `submission/configs/submission.json` |
+| v7 | SASRec CE, future-5 | `submission/configs/sasrec_submission.json` |
+| v8 | Hybrid Ensemble + Reranking | `submission/configs/hybrid_ensemble_submission.json` |
 
-Run on the Slurm login node:
+Slurm에서 실행:
 ```bash
-bash scripts/submit_compare.sh smoke
-bash scripts/submit_compare.sh cpu
-bash scripts/submit_compare.sh gpu
-bash scripts/submit_refit.sh  # all train.csv rows; configs/submission.json
+bash submission/scripts/submit_refit.sh
+RS_REFIT_CONFIG=configs/sasrec_submission.json bash submission/scripts/submit_refit.sh
+bash submission/scripts/submit_hybrid_stage.sh bases
 ```
-Jobs use `/home/minseok/.venvs/rs-hw2/bin/python` and the competition `../data` directory.
-Kaggle API: `sbatch slurm/kaggle.sbatch submit --manifest results/full_JOB_ID/manifest.json`.
-For the original searches, set `RS_CONFIG=configs/compare.json` or `configs/slim_regularization.json`.
-Snapshots, logs, and results stay local; commit model code/settings at Kaggle submission time.
-
-References: [EASE](https://arxiv.org/abs/1905.03375), [SLIM/RP3β implementation reference](https://github.com/MaurizioFD/RecSys2019_DeepLearning_Evaluation), [SASRec](https://arxiv.org/abs/1808.09781).
+하이브리드는 bases → auxiliary → features → infer 순서로 실행하며, 이전 단계의 결과 경로를 전달합니다. 선택된 랭커 체크포인트와 학습 산출물은 서버에 보관합니다.
+탐색 코드·후보 설정·데이터·로그·보고서는 GitHub에 올리지 않습니다.

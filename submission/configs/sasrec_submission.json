@@ -1,0 +1,19 @@
+{
+  "seed": 2020,
+  "selection": {
+    "protocol": "per-user chronological 80/20, binary full-catalog NDCG@20",
+    "validation_ndcg20": {"sasrec": 0.18046522359044162},
+    "three_seed_mean_ndcg20": 0.17604990708240034,
+    "sasrec_best_epoch": 120,
+    "validation_run": "sasrec_dev_81089/future5_ce_s2020"
+  },
+  "models": {
+    "sasrec": {
+      "dim": 64, "maxlen": 100, "blocks": 2, "heads": 2, "dropout": 0.2,
+      "learning_rate": 0.001, "batch_size": 128, "epochs": 120,
+      "window": "coverage", "stride": 50, "objective": "ce", "horizon": 5,
+      "order": "chronological", "label_smoothing": 0.0,
+      "temperature": 1.0, "weight_decay": 0.0
+    }
+  }
+}
