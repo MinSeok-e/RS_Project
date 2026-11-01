@@ -1,0 +1,43 @@
+{
+  "keyword": "MoE16_CE_FullRefit_Bag3",
+  "method": "raw",
+  "quota_utc_date": "2026-11-01",
+  "fit_interactions": 80621,
+  "data_hashes": {
+    "train.csv": "547030222b06c2e7a8710515e72dfd8c635ba3d6fbfc13e571a2dc45a0afe4c2",
+    "test.csv": "824336a9937e0ed385f9a5a74b11c7a67f2437fb261ddca07fdc05059928e570",
+    "sample_submission.csv": "1049b343370fdc9947c2e28a46354454ee1c010ae3ea5ae682c60c6ed0286f79"
+  },
+  "inputs": [
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_ranker_82373/bag_rrf.npy",
+      "sha256": "702b027ecf410515350b948b5c9104f2ff99c5033736774268b27933c4ecf3a5",
+      "weight": 1.0
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_ranker_82373/complete.json",
+      "sha256": "b9fce8f5554dddfc70e3e60aa5e54b8335f51eaaa77b9641ab6de676ffc169bc"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/report/train_ranker_final.py",
+      "sha256": "15ef8e87522a2b074e06fa7f782b7b3b42618a0f098cb2e623977476b963171d"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_ranker_82373/seed2020.pt",
+      "sha256": "b163f9740c43fc1e50f6e71ddfab4778f208136ead13f90ae8eb332ffc051447"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_ranker_82373/seed2021.pt",
+      "sha256": "9b129e295749a9fb2b752b292c79b78f2215a8a78ed4877cd61ae462136d164f"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_ranker_82373/seed2022.pt",
+      "sha256": "8b3a2a342374caa151a9c7489a2a821f9bedbf249afac0fe407db021805d2623"
+    }
+  ],
+  "validation_ndcg20": null,
+  "training_policy": "Final refit only; previous outer train.csv block included as an additional historical query. Former validation metrics are not holdout scores for this model.",
+  "fixed_refit_config": "submission/configs/v10_fit.json"
+}

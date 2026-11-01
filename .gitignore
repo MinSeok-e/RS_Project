@@ -93,3 +93,6 @@
 !/submission/slurm/selected.sbatch
 !/submission/configs/v9.json
 !/submission/tests/test_selected_submission.py
+!/submission/rs_project/final_ranker_fit.py
+!/submission/configs/v10_fit.json
+!/submission/configs/v10.json
