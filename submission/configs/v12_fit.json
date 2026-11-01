@@ -1,0 +1,28 @@
+{
+  "trial": 2,
+  "family": "filter_svd_events_past",
+  "parameters": {
+    "length": 100,
+    "layers": 2,
+    "dropout": 0.4,
+    "lr": 0.0003,
+    "prefixes_per_user": 8,
+    "dim": 256,
+    "horizon": 5,
+    "exclude_past": true,
+    "sampling": "events",
+    "initialization": "svd",
+    "svd_norm": 0.16,
+    "svd_pop_power": 0.25
+  },
+  "metrics": {
+    "ndcg@20": 0.21976291412022522,
+    "recall@20": 0.22359492184158739,
+    "hit@20": 0.8065573770491803,
+    "users": 610
+  },
+  "elapsed_seconds": 226.85323989670724,
+  "best_epoch": 90,
+  "stopped_epoch": 120,
+  "predictions": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/search_82183/filter_svd_events_past_best_predictions.npz"
+}

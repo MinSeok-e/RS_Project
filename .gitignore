@@ -97,3 +97,6 @@
 !/submission/configs/v10_fit.json
 !/submission/configs/v10.json
 !/submission/configs/v11.json
+!/submission/rs_project/final_filter_fit.py
+!/submission/configs/v12_fit.json
+!/submission/configs/v12.json

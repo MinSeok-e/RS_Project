@@ -1,0 +1,44 @@
+{
+  "keyword": "FMLP_SVD_Full_Bag3",
+  "method": "raw",
+  "quota_utc_date": "2026-11-01",
+  "fit_interactions": 80621,
+  "data_hashes": {
+    "train.csv": "547030222b06c2e7a8710515e72dfd8c635ba3d6fbfc13e571a2dc45a0afe4c2",
+    "test.csv": "824336a9937e0ed385f9a5a74b11c7a67f2437fb261ddca07fdc05059928e570",
+    "sample_submission.csv": "1049b343370fdc9947c2e28a46354454ee1c010ae3ea5ae682c60c6ed0286f79"
+  },
+  "inputs": [
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_fmlp_82408/bag_rrf.npy",
+      "sha256": "56bb12076f75e44685e0fcd1a0e7117b02a7dcca043b1383cb5e869855e0dd1f",
+      "weight": 1.0
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_fmlp_82408/complete.json",
+      "sha256": "0231bda79beffb8c2734ae8722f23c7779385a4fcf17e3b01b50ee416dc49a2f"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/report/refit_filter_selected.py",
+      "sha256": "ccb596e7e4a563d432ce66249de53dc2e9cf2fd420f814a16515202cf868c345"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_fmlp_82408/seed2020.pt",
+      "sha256": "800108411bd1425713572e0f0118f3c166e74e1882d057ce471383ceffdc44f0"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_fmlp_82408/seed2021.pt",
+      "sha256": "06db75104d7fcb1e2091327f5a6ca185da08d01ee4a20bd264bba4a62d8b30f3"
+    },
+    {
+      "path": "/mnt/nodes/a-rtx3090-04/semester/1/RS/project/results/full_fmlp_82408/seed2022.pt",
+      "sha256": "fd2e8e2fbc1668bc369ce77d813ee32a686ef97f78764876f3bad181b0cf66a8"
+    }
+  ],
+  "validation_ndcg20": null,
+  "single_seed_validation_before_refit": 0.21976291412022522,
+  "training_policy": "Three fixed seeds, 90 epochs each, full train.csv; SVD initialized FMLPRec. Single-seed pre-refit validation is not the bag score.",
+  "fixed_refit_config": "submission/configs/v12_fit.json"
+}
